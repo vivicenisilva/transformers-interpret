@@ -28,7 +28,8 @@ class BaseExplainer(ABC):
             else self.tokenizer.bos_token_id
         )
 
-        self.model_prefix = model.base_model_prefix
+        # self.model_prefix = model.base_model_prefix
+        self.model_prefix = "bert"
 
         if self._model_forward_signature_accepts_parameter("position_ids"):
             self.accepts_position_ids = True
